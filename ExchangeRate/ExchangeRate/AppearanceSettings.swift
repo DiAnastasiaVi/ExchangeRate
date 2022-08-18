@@ -11,8 +11,9 @@ class Colors {
     static let shared = Colors()
     private init() { }
 
-    var orange: UIColor = UIColor(red: 251, green: 123, blue: 11, alpha: 1)
-    var yellow1: UIColor = UIColor(red: 242, green: 178, blue: 76, alpha: 1)
-    var yellow2: UIColor = UIColor(red: 239, green: 162, blue: 39, alpha: 1)
+    var iconOrange = UIColor(red: 251/255.0, green: 123/255.0, blue: 11/255.0, alpha: 1.0)
+    var yellow1 = UIColor(red: 242.0/255.0, green: 178.0/255.0, blue: 76.0/255.0, alpha: 1.0)
+    var yellow2 = UIColor(red: 239.0/255.0, green: 162.0/255.0, blue: 39.0/255.0, alpha: 1.0)
+    var exchangeYellow = UIColor(red: 252.0/255.0, green: 176.0/255.0, blue: 21.0/255.0, alpha: 255.0)
 }
 

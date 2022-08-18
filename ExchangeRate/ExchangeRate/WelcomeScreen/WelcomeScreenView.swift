@@ -29,8 +29,9 @@ class WelcomeScreenView: UIView {
     private func setImageView(){
         let exchangeImage = UIImage(named: "1")
         imageView?.image = exchangeImage
-        imageView?.contentMode = .top
+        //imageView?.contentMode = .top
         imageView?.semanticContentAttribute = .forceLeftToRight
+        imageView?.contentMode = .scaleAspectFill
         
     }
     
@@ -38,9 +39,8 @@ class WelcomeScreenView: UIView {
         let safeArea = self.safeAreaLayoutGuide
         imageView?.translatesAutoresizingMaskIntoConstraints = false
         imageView?.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
-        imageView?.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor).isActive = true
-        imageView?.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor).isActive = true
-        imageView?.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor).isActive = true
+        imageView?.widthAnchor.constraint(equalTo: safeArea.widthAnchor).isActive = true
+        imageView?.heightAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 0.55).isActive = true
     }
 }
 

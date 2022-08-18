@@ -33,7 +33,7 @@ class WelcomeScreenViewController: UIViewController, StoryboardLoadable {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mainView?.commonSetup()
-        self.view.backgroundColor = .blue
+        self.view.backgroundColor = Colors.shared.exchangeYellow
     }
     
     deinit {
