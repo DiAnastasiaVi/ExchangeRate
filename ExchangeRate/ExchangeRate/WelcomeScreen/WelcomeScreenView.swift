@@ -46,15 +46,15 @@ class WelcomeScreenView: UIView {
     
     private func setLabel() {
         welcomeLabel?.text = """
-  Хммм...
-  Який курс був тиждень тому? Хто б знав...
-  Ми знаємо! Оберіть дату, що вас цікавить, і курс валют з'явиться на екрані.
-  Удачі!
-  """
+                              Хммм...
+                              Який курс був тиждень тому? Хто б знав...
+                              Ми знаємо! Оберіть дату, що вас цікавить, і курс валют з'явиться на екрані.
+                              Дякуємо, що ви з нами!
+                             """
         welcomeLabel?.textAlignment = .center
         welcomeLabel?.numberOfLines = 5
         welcomeLabel?.contentMode = .center
-        welcomeLabel?.contentMode = .scaleAspectFill
+        //welcomeLabel?.contentMode = .scaleAspectFill
     }
     
     private func setLabelConstraints() {
