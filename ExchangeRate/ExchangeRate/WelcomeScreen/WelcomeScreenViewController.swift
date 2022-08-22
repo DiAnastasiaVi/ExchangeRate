@@ -39,7 +39,4 @@ class WelcomeScreenViewController: UIViewController, StoryboardLoadable {
     deinit {
         print("Deinit: \(Self.self)")
     }
-
-
-
 }
