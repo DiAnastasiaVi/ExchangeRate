@@ -9,6 +9,7 @@ import UIKit
 
 enum AvailableScreens {
     case welcomeScreen
+    case currentDate
 }
 
 final class ScreensCoordinator: Coordinator {
@@ -41,6 +42,20 @@ final class ScreensCoordinator: Coordinator {
         let contr = WelcomeScreenViewController.startVC()
         self.navigationScreens.append(.welcomeScreen)
         self.navigationController.navigationBar.isHidden = true
+        contr.eventHandler = {[weak self] event in
+            switch event {
+            case .startButtonPressed:
+                self?.jumpToScreen(.currentDate)
+            }
+        }
+        self.navigationController.pushViewController(contr, animated: true)
+        self.navigationController.setViewControllers([contr], animated: false)
+    }
+    
+    private func makeCurrentDateScreen() {
+        let contr = CurrentDateViewController.startVC()
+        self.navigationScreens.append(.currentDate)
+        self.navigationController.navigationBar.isHidden = true
         self.navigationController.pushViewController(contr, animated: true)
         self.navigationController.setViewControllers([contr], animated: false)
     }
@@ -54,6 +69,8 @@ extension ScreensCoordinator {
         switch jumpTo {
         case .welcomeScreen:
             self.makeWelcomeScreen()
+        case .currentDate:
+            self.makeCurrentDateScreen()
         }
     }
 }

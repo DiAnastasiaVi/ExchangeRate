@@ -39,4 +39,12 @@ class WelcomeScreenViewController: UIViewController, StoryboardLoadable {
     deinit {
         print("Deinit: \(Self.self)")
     }
+    
+    //MARK: -
+    //MARK: Methods
+    
+    @IBAction func startButtonPressed(_ sender: Any) {
+        eventHandler?(.startButtonPressed)
+    }
+    
 }

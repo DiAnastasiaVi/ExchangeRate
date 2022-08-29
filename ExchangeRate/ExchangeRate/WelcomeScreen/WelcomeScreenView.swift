@@ -70,7 +70,6 @@ class WelcomeScreenView: UIView {
     
     private func setStartButtonTitleSettings() {
         startButton?.setTitle("Start", for: .normal)
-        startButton?.setTitleColor(.black, for: .normal)
         startButton?.titleLabel?.textAlignment = .center
         startButton?.contentMode = .center
     }
