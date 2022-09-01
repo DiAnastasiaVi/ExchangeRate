@@ -32,7 +32,6 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mainView?.commonSetup()
-        self.view.backgroundColor = .darkGray
     }
     
     deinit {

@@ -13,6 +13,6 @@ class CurrentDateView: UIView {
     // MARK: Public Methods
     
     public func commonSetup() {
-        self.backgroundColor = .black
+        self.backgroundColor = .red
     }
 }
