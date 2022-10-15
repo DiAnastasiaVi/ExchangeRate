@@ -29,6 +29,11 @@ class CurrentDateView: UIView {
     
     private func datePickerSettings() {
         datePicker?.datePickerMode = .date
+        let calendar = Calendar(identifier: .gregorian)
+        var components = DateComponents()
+        components.year = -4
+        let minDate = calendar.date(byAdding: components, to: Date())
+        datePicker?.minimumDate = minDate
         datePicker?.maximumDate = .now
     }
     
