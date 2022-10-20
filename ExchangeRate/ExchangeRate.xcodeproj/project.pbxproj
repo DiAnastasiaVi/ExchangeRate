@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D03338529014F7700DAC67C /* CurrentDateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D03338429014F7700DAC67C /* CurrentDateModel.swift */; };
 		5DA0C8ED289AC7E900D4DCD1 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA0C8EC289AC7E900D4DCD1 /* WelcomeScreenViewController.swift */; };
 		5DA0C8F0289AC87700D4DCD1 /* WelcomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA0C8EF289AC87700D4DCD1 /* WelcomeScreenView.swift */; };
 		5DA39A4128A5833F00197996 /* AppearanceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA39A4028A5833F00197996 /* AppearanceSettings.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D03338429014F7700DAC67C /* CurrentDateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateModel.swift; sourceTree = "<group>"; };
 		5DA0C8EC289AC7E900D4DCD1 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		5DA0C8EF289AC87700D4DCD1 /* WelcomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenView.swift; sourceTree = "<group>"; };
 		5DA39A4028A5833F00197996 /* AppearanceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettings.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				5DFC72D428BCFF26005D7A46 /* CurrentDateView.swift */,
+				5D03338429014F7700DAC67C /* CurrentDateModel.swift */,
 				5DFC72D628BCFF39005D7A46 /* CurrentDateViewController.swift */,
 				5DFC72D828BCFF47005D7A46 /* CurrentDate.storyboard */,
 			);
@@ -193,6 +196,7 @@
 				5DA43FE028BD07BE00150DCC /* AppConfigurator.swift in Sources */,
 				5DFC72D728BCFF39005D7A46 /* CurrentDateViewController.swift in Sources */,
 				5DDD276B28AE783A0058FCB2 /* Coordinator.swift in Sources */,
+				5D03338529014F7700DAC67C /* CurrentDateModel.swift in Sources */,
 				5DA0C8ED289AC7E900D4DCD1 /* WelcomeScreenViewController.swift in Sources */,
 				5DFC72D528BCFF26005D7A46 /* CurrentDateView.swift in Sources */,
 				5DE835B5289D7B7800805842 /* StoryboardLoadable.swift in Sources */,
