@@ -7,18 +7,16 @@
 
 import Foundation
 
-class CurrentDateModel {
-    public var collectionData: [CurrentDateData] = []
+//class CurrentDateModel {
+//    public var collectionData: [CurrentDateData] = []
+//}
+
+struct CurrentDateData {
+    var currency: CurrentDateCases
+    var rate: Double
 }
 
-struct CurrentDateData: Decodable {
-    var baseCurrency: String
-    var currency: String
-    var saleRateNB: Double
-    var purchaseRateNB: Double
-}
-
-enum CurrentDateCases: String, CaseIterable, Decodable {
+enum CurrentDateCases: String, CaseIterable {
     case aud = "AUD"
     case cad = "CAD"
     case czk = "CZK"
