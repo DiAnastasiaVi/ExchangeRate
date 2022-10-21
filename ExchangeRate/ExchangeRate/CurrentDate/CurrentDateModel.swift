@@ -7,9 +7,11 @@
 
 import Foundation
 
-//class CurrentDateModel {
-//    public var collectionData: [CurrentDateData] = []
-//}
+class CurrentDateModel {
+    public var collectionData: [CurrentDateData] = []
+    
+    //func (refresh data/ update) яке буде лізти в менеджер і забирати дані звідти
+}
 
 struct CurrentDateData {
     var currency: CurrentDateCases
