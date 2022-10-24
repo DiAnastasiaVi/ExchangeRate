@@ -28,7 +28,12 @@ class NetworkManager {
         print(specificDateUrl)
         
         //
-//        var request = URLRequest(url: specificDateUrl)
-//        request.httpMethod = "GET"
+        var request = URLRequest(url: specificDateUrl)
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: request) {(data, response, error) in
+            print(data)
+            print(error?.localizedDescription)
+        }.resume()
     }
 }
