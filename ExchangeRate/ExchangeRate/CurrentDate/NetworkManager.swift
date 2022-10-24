@@ -15,7 +15,7 @@ class NetworkManager {
     private init() { }
     
    // var date: String = "01.12.2014"
-    let url = "https://api.privatbank.ua/p24api/exchange_rates?json&date=" //+ date
+    //let url = "https://api.privatbank.ua/p24api/exchange_rates?json&date=" //+ date
     
     func getCurrency(on date: Date, completion: @escaping ([CurrentDateData]?) -> Void) {
         //TODO: трансформувати дату в стрінг (в цій функції)
@@ -24,5 +24,20 @@ class NetworkManager {
         //TODO: декодувати дату з джсон
         //TODO: декодовану дату трансформувати в масив [CurrentDateData]
         //TODO: викликати completion [CurrentDateData]
+        
+        //1
+        guard let date1 = CurrentDateView().datePicker?.date else {return}
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "d/M/y"
+        
+        //2
+        guard let specificDateUrl = URL(string: "https://api.privatbank.ua/p24api/exchange_rates?json&date=" + dateFormatter.string(from: date1)) else {return}
+        
+        //
+        var request = URLRequest(url: specificDateUrl)
+        request.httpMethod = "GET"
+        
+        //
+        
     }
 }
