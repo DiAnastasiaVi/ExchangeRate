@@ -44,6 +44,9 @@ class WelcomeScreenViewController: UIViewController, StoryboardLoadable {
     //MARK: Methods
     
     @IBAction func startButtonPressed(_ sender: Any) {
+        NetworkManager.shared.getCurrency(on: Date()) {
+            print($0)
+        }
         eventHandler?(.startButtonPressed)
     }
     
