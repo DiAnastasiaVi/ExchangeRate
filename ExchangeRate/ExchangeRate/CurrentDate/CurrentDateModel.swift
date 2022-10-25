@@ -13,12 +13,26 @@ class CurrentDateModel {
     //func (refresh data/ update) яке буде лізти в менеджер і забирати дані звідти
 }
 
-struct CurrentDateData {
-    var currency: CurrentDateCases
-    var rate: Double
+struct CurrentDateData: Decodable {
+//    var currency: CurrentDateCases
+//    var rate: Double
+    let date: String
+    let bank: String
+    let baseCurrency: Int
+    let baseCurrencyLit: String
+    let exchangeRate: ExchangeRate
+    
+    struct ExchangeRate: Decodable {
+        let baseCurrency: String
+        let currency: String
+        let saleRateNB: Double
+        let purchaseRateNB: Double
+        let saleRate: Double
+        let purchaseRate: Double
+    }
 }
 
-enum CurrentDateCases: String, CaseIterable {
+enum CurrentDateCases: String, CaseIterable, Decodable {
     case aud = "AUD"
     case cad = "CAD"
     case czk = "CZK"
