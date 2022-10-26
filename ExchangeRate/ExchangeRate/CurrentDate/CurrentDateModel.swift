@@ -14,22 +14,23 @@ class CurrentDateModel {
 }
 
 struct CurrentDateData: Decodable {
-//    var currency: CurrentDateCases
-//    var rate: Double
-    let date: String
-    let bank: String
-    let baseCurrency: Int
-    let baseCurrencyLit: String
-    let exchangeRate: ExchangeRate
+    var currency: CurrentDateCases
+    var rate: Double
     
-    struct ExchangeRate: Decodable {
-        let baseCurrency: String
-        let currency: String
-        let saleRateNB: Double
-        let purchaseRateNB: Double
-        let saleRate: Double
-        let purchaseRate: Double
-    }
+//    let date: String
+//    let bank: String
+//    let baseCurrency: Int
+//    let baseCurrencyLit: String
+//    let exchangeRate: ExchangeRate
+//
+//    struct ExchangeRate: Decodable {
+//        let baseCurrency: String
+//        let currency: String
+//        let saleRateNB: Double
+//        let purchaseRateNB: Double
+//        let saleRate: Double
+//        let purchaseRate: Double
+//    }
 }
 
 enum CurrentDateCases: String, CaseIterable, Decodable {

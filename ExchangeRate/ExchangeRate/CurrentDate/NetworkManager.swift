@@ -33,7 +33,7 @@ class NetworkManager {
         request.httpMethod = "GET"
         
         URLSession.shared.dataTask(with: request) {(data, response, error) in
-            
+            print(String(data: data!, encoding: String.Encoding.utf8))
         }.resume()
     }
 }
