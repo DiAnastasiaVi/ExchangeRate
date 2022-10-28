@@ -8,32 +8,16 @@
 import Foundation
 
 class CurrentDateModel {
-    public var collectionData: [CurrentDateData] = []
+    public var collectionModelData: [CurrentDateData] = []
     
     //func (refresh data/ update) яке буде лізти в менеджер і забирати дані звідти
 }
-
-struct CurrentDateData: Decodable {
+struct CurrentDateData: Codable {
     var currency: CurrentDateCases
     var rate: Double
-    
-//    let date: String
-//    let bank: String
-//    let baseCurrency: Int
-//    let baseCurrencyLit: String
-//    let exchangeRate: ExchangeRate
-//
-//    struct ExchangeRate: Decodable {
-//        let baseCurrency: String
-//        let currency: String
-//        let saleRateNB: Double
-//        let purchaseRateNB: Double
-//        let saleRate: Double
-//        let purchaseRate: Double
-//    }
 }
 
-enum CurrentDateCases: String, CaseIterable, Decodable {
+enum CurrentDateCases: String, CaseIterable, Codable {
     case aud = "AUD"
     case cad = "CAD"
     case czk = "CZK"
