@@ -11,19 +11,12 @@ class NetworkManager {
     static let shared = NetworkManager()
     private init() { }
     
-//    var jsonUrl = URL(string: "")
+    let jsonUrl = "https://api.privatbank.ua/p24api/exchange_rates?json&date="
+    
     func getCurrency(on date: Date, completion: @escaping (JsonData?) -> Void) {
-        //TODO: трансформувати дату в стрінг (в цій функції)
-        //TODO: url + date зробити виклик по адресі
-        //TODO: після успішного виклику зробити прінт(дата) - прінт результату виклику
-        //TODO: декодувати дату з джсон
-        //TODO: декодовану дату трансформувати в масив [CurrentDateData]
-        //TODO: викликати completion [CurrentDateData]
-        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
-        guard let specificDateUrl = URL(string: "https://api.privatbank.ua/p24api/exchange_rates?json&date=" + dateFormatter.string(from: date)) else {return}
-//        jsonUrl = specificDateUrl
+        guard let specificDateUrl = URL(string: jsonUrl + dateFormatter.string(from: date)) else {return}
         var request = URLRequest(url: specificDateUrl)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
