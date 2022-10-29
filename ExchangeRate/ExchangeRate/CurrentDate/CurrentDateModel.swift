@@ -10,10 +10,14 @@ import Foundation
 class CurrentDateModel {
     public var collectionModelData: [CurrentDateData] = []
     
-    //func (refresh data/ update) яке буде лізти в менеджер і забирати дані звідти
+    func refreshData(for date: Date) {
+        NetworkManager.shared.getCurrency(on: date) {
+            self.collectionModelData = $0 ?? []
+        }
+    }
 }
 struct CurrentDateData: Codable {
-    var currency: CurrentDateCases
+    var currency: String
     var rate: Double
 }
 

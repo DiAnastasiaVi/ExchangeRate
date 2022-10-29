@@ -22,7 +22,7 @@ struct JsonData: Codable {
     
     struct ExchangeRate: Codable {
         let baseCurrency: BaseCurrency
-        let currency: String?
+        let currency: String
         let saleRateNB, purchaseRateNB: Double
         let saleRate, purchaseRate: Double?
     }

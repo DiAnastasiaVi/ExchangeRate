@@ -20,6 +20,8 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
     private var mainView: CurrentDateView? {
         return self.view as? CurrentDateView
     }
+    internal var model = CurrentDateModel()
+    internal let cellId = "cell"
     
     //MARK: -
     //MARK: Init and Deinit
@@ -33,6 +35,9 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
         super.viewDidLoad()
         self.mainView?.commonSetup()
         self.view.backgroundColor = Colors.shared.exchangeYellow
+        
+        self.mainView?.tableView?.dataSource = self
+        self.mainView?.tableView?.delegate = self
     }
     
     deinit {
