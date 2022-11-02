@@ -10,6 +10,7 @@ import Foundation
 class JsonDataModel: Codable {
     public var result: [JsonData]
 }
+
 struct JsonData: Codable {
     let date, bank: String
     let baseCurrency: Int

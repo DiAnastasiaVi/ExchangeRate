@@ -14,6 +14,7 @@ class CurrentDateView: UIView {
     
     @IBOutlet weak var datePicker: UIDatePicker?
     @IBOutlet weak var tableView: UITableView?
+    private var cellId = "cell"
     
     // MARK: -
     // MARK: Public Methods
@@ -45,7 +46,11 @@ class CurrentDateView: UIView {
     }
     
     private func tableViewSettings() {
-        tableView?.backgroundColor = .red
+        let tableDataView = UITableView(frame: CGRect(x: 50, y: 50, width: 150, height: 180), style: .grouped)
+        self.tableView = tableDataView
+        self.addSubview(tableDataView)
+        tableDataView.register(CurrentDateTableViewCell.self, forCellReuseIdentifier: cellId)
+        tableDataView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     private func tableViewConstraints() {
@@ -57,4 +62,5 @@ class CurrentDateView: UIView {
         tableView?.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor).isActive = true
         tableView?.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor).isActive = true
     }
+    
 }

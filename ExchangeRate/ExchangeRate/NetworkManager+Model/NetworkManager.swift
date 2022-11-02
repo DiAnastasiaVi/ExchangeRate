@@ -26,7 +26,7 @@ class NetworkManager {
             do {
                 let decodedData = try JSONDecoder().decode(JsonData.self, from: data)
                 completion(decodedData.exchangeRate.compactMap{
-                    CurrentDateData(currency: $0.currency, rate: $0.saleRateNB)
+                    CurrentDateData(currency: $0.currency, saleRateNB: $0.saleRateNB)
                 })
             } catch {
                 print(error)

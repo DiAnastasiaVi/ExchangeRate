@@ -16,35 +16,13 @@ class CurrentDateModel {
         }
     }
 }
+
 struct CurrentDateData: Codable {
     var currency: String
-    var rate: Double
-}
-
-enum CurrentDateCases: String, CaseIterable, Codable {
-    case aud = "AUD"
-    case cad = "CAD"
-    case czk = "CZK"
-    case dkk = "DKK"
-    case huf = "HUF"
-    case ils = "ILS"
-    case jpy = "JPY"
-    case lvl = "LVL"
-    case ltl = "LTL"
-    case nok = "NOK"
-    case skk = "SKK"
-    case sek = "SEK"
-    case chf = "CHF"
-    case gbp = "GBP"
-    case usd = "USD"
-    case byr = "BYR"
-    case eur = "EUR"
-    case gel = "GEL"
-    case plz = "PLZ"
+    var saleRateNB: Double
     
-//    public var getImageName: String {
-//        switch self {
-//        case .
-//        }
-//    }
+    enum CodingKeys: String, CodingKey {
+        case currency
+        case saleRateNB
+    }
 }
