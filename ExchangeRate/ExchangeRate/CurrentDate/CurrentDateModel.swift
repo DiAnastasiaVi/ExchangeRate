@@ -21,7 +21,7 @@ struct CurrentDateData: Codable {
     var currency: String
     var saleRateNB: Double
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case currency
         case saleRateNB
     }
