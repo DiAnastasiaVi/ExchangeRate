@@ -9,14 +9,20 @@ import UIKit
 
 extension CurrentDateViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.model.collectionModelData.map{$0.currency}.count
+        if model.collectionModelData.map({$0.currency}).count != 0 {
+            print(model.collectionModelData.map({$0.currency}).count)
+        }
+        return model.collectionModelData.map{$0.currency}.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? CurrentDateTableViewCell else {
             return UITableViewCell()
         }
-        cell.setData(model.collectionModelData[indexPath.row])
+//        cell.setData(model.collectionModelData[indexPath.row])
+        cell.currencyLabel?.text = model.collectionModelData[indexPath.row].currency
+        cell.valueLabel?.text = String(model.collectionModelData[indexPath.row].saleRateNB)
+        tableView.reloadData()
         return cell
     }
     

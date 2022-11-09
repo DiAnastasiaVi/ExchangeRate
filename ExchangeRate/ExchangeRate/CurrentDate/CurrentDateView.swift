@@ -46,11 +46,12 @@ class CurrentDateView: UIView {
     }
     
     private func tableViewSettings() {
-        let tableDataView = UITableView(frame: CGRect(x: 50, y: 50, width: 150, height: 180), style: .grouped)
-        self.tableView = tableDataView
-        self.addSubview(tableDataView)
-        tableDataView.register(CurrentDateTableViewCell.self, forCellReuseIdentifier: cellId)
-        tableDataView.translatesAutoresizingMaskIntoConstraints = false
+//        let tableDataView = UITableView(frame: CGRect(x: 50, y: 50, width: 150, height: 180), style: .grouped)
+//        self.tableView = tableDataView
+//        self.addSubview(tableDataView)
+//        tableDataView.register(CurrentDateTableViewCell.self, forCellReuseIdentifier: cellId)
+//        tableDataView.translatesAutoresizingMaskIntoConstraints = false
+        tableView?.register(CurrentDateTableViewCell.self, forCellReuseIdentifier: cellId)
     }
     
     private func tableViewConstraints() {
