@@ -19,10 +19,9 @@ extension CurrentDateViewController: UITableViewDelegate, UITableViewDataSource 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? CurrentDateTableViewCell else {
             return UITableViewCell()
         }
-//        cell.setData(model.collectionModelData[indexPath.row])
-        cell.currencyLabel?.text = model.collectionModelData[indexPath.row].currency
-        cell.valueLabel?.text = String(model.collectionModelData[indexPath.row].saleRateNB)
-        tableView.reloadData()
+        cell.setData(model.collectionModelData[indexPath.row])
+//        cell.currencyLabel?.text = model.collectionModelData[indexPath.row].currency
+//        cell.valueLabel?.text = String(model.collectionModelData[indexPath.row].saleRateNB)
         return cell
     }
     

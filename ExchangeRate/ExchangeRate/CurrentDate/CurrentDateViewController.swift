@@ -8,7 +8,7 @@
 import UIKit
 
 enum CurrentDateEvents {
-    case something
+    case startButtonPresed
 }
 
 class CurrentDateViewController: UIViewController, StoryboardLoadable {
@@ -34,13 +34,28 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mainView?.commonSetup()
-        self.view.backgroundColor = Colors.shared.exchangeYellow
+        self.mainView?.welcomeViewSetup()
+        self.view.backgroundColor = Colors.shared.iconOrange
         
         self.mainView?.tableView?.dataSource = self
         self.mainView?.tableView?.delegate = self
+//        self.mainView?.tableView?.register(CurrentDateTableViewCell.self, forCellReuseIdentifier: cellId)
     }
     
     deinit {
         print("Deinit: \(Self.self)")
     }
+    
+    @IBAction func startButtonPressed(_ sender: Any) {
+        NetworkManager.shared.getCurrency(on: Date()) {_ in
+        }
+//        mainView?.self.tableView?.reloadData()
+        self.mainView?.tableView?.beginUpdates()
+        self.mainView?.tableView?.reloadRows(at: (self.mainView?.tableView?.indexPathsForVisibleRows)!, with: .none)
+        self.mainView?.tableView?.endUpdates()
+        print(self.mainView?.tableView?.visibleCells)
+        self.mainView?.welcomeView?.isHidden = true
+        eventHandler?(.startButtonPresed)
+    }
+    
 }

@@ -32,7 +32,7 @@ final class ScreensCoordinator: Coordinator {
     }
 
     public func start() {
-        self.jumpToScreen(.welcomeScreen)
+        self.jumpToScreen(.currentDate)
     }
     
     // MARK: -

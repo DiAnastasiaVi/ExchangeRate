@@ -25,26 +25,31 @@ class CurrentDateTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var labelStack: UIStackView?
-    @IBOutlet weak var currencyLabel: UILabel?
-    @IBOutlet weak var valueLabel: UILabel?
+    @IBOutlet weak var currencyLabel: UILabel? = {
+        let label = UILabel(frame: CGRect.zero)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    @IBOutlet weak var valueLabel: UILabel? = {
+        let label = UILabel(frame: CGRect.zero)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
     private var model = CurrentDateModel()
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setConstraints()
-    }
+    private var data: CurrentDateData?
     
     // MARK: -
     // MARK: Public Methods
     
-//    public func setData(_ data: CurrentDateData) {
-//        currencyLabel?.text = data.currency
-//        currencyLabel?.backgroundColor = .blue
-//        valueLabel?.text = String(data.saleRateNB)
-//        valueLabel?.backgroundColor = .green
-//        setConstraints()
-//    }
+    public func setData(_ data: CurrentDateData) {
+        currencyLabel?.text = data.currency
+        currencyLabel?.backgroundColor = .blue
+        valueLabel?.text = String(data.saleRateNB)
+        self.data = data
+        valueLabel?.backgroundColor = .green
+        setConstraints()
+    }
     
     // MARK: -
     // MARK: Private Methods
@@ -59,6 +64,16 @@ class CurrentDateTableViewCell: UITableViewCell {
         labelStack?.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor).isActive = true
         labelStack?.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor).isActive = true
         labelStack?.backgroundColor = .purple
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        currencyLabel?.text = ""
+        valueLabel?.text = ""
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
     
 }
