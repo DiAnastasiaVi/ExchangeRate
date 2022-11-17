@@ -65,8 +65,7 @@ class CurrentDateView: UIView {
     
     private func tableViewSettings() {
         tableView?.register(CurrentDateTableViewCell.self, forCellReuseIdentifier: cellId)
-        let cell = UINib(nibName: cellId, bundle: Bundle.main)
-        tableView?.register(cell, forCellReuseIdentifier: cellId)
+        tableView?.reloadData()
     }
     
     private func tableViewConstraints() {

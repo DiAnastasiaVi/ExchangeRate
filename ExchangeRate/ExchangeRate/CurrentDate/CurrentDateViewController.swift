@@ -49,13 +49,13 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
     @IBAction func startButtonPressed(_ sender: Any) {
         NetworkManager.shared.getCurrency(on: Date()) {_ in
         }
-//        mainView?.self.tableView?.reloadData()
-        self.mainView?.tableView?.beginUpdates()
-        self.mainView?.tableView?.reloadRows(at: (self.mainView?.tableView?.indexPathsForVisibleRows)!, with: .none)
-        self.mainView?.tableView?.endUpdates()
-        print(self.mainView?.tableView?.visibleCells)
         self.mainView?.welcomeView?.isHidden = true
         eventHandler?(.startButtonPresed)
+
+        model.refreshData(for: .now)
+        print(model.collectionModelData.map({$0.currency}).count)
+        print(model.collectionModelData)
+        self.mainView?.tableView?.reloadData()
     }
     
 }

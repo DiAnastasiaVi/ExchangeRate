@@ -12,18 +12,6 @@ class CurrentDateTableViewCell: UITableViewCell {
     // MARK: -
     // MARK: Properties
     
-//    private var currencyLabel: UILabel = {
-//        let label = UILabel(frame: CGRect.zero)
-//        label.translatesAutoresizingMaskIntoConstraints = false
-//        return label
-//    }()
-//    private var valueLabel: UILabel = {
-//        let label = UILabel(frame: CGRect.zero)
-//        label.translatesAutoresizingMaskIntoConstraints = false
-//        return label
-//    }()
-    
-    
     @IBOutlet weak var labelStack: UIStackView?
     @IBOutlet weak var currencyLabel: UILabel? = {
         let label = UILabel(frame: CGRect.zero)
@@ -43,6 +31,7 @@ class CurrentDateTableViewCell: UITableViewCell {
     // MARK: Public Methods
     
     public func setData(_ data: CurrentDateData) {
+        model.refreshData(for: .now)
         currencyLabel?.text = data.currency
         currencyLabel?.backgroundColor = .blue
         valueLabel?.text = String(data.saleRateNB)
@@ -64,16 +53,6 @@ class CurrentDateTableViewCell: UITableViewCell {
         labelStack?.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor).isActive = true
         labelStack?.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor).isActive = true
         labelStack?.backgroundColor = .purple
-    }
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        currencyLabel?.text = ""
-        valueLabel?.text = ""
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
     }
     
 }

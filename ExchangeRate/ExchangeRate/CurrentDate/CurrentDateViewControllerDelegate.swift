@@ -9,9 +9,8 @@ import UIKit
 
 extension CurrentDateViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if model.collectionModelData.map({$0.currency}).count != 0 {
-            print(model.collectionModelData.map({$0.currency}).count)
-        }
+        model.refreshData(for: .now)
+        print(model.collectionModelData.map({$0.currency}).count)
         return model.collectionModelData.map{$0.currency}.count
     }
     
@@ -20,8 +19,8 @@ extension CurrentDateViewController: UITableViewDelegate, UITableViewDataSource 
             return UITableViewCell()
         }
         cell.setData(model.collectionModelData[indexPath.row])
-//        cell.currencyLabel?.text = model.collectionModelData[indexPath.row].currency
-//        cell.valueLabel?.text = String(model.collectionModelData[indexPath.row].saleRateNB)
+        cell.currencyLabel?.text = model.collectionModelData[indexPath.row].currency
+        cell.valueLabel?.text = String(model.collectionModelData[indexPath.row].saleRateNB)
         return cell
     }
     
