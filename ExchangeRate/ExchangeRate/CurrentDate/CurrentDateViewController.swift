@@ -52,7 +52,7 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
         self.mainView?.welcomeView?.isHidden = true
         eventHandler?(.startButtonPresed)
 
-        model.refreshData(for: .now)
+        model.refreshData(for: .distantPast)
         print(model.collectionModelData.map({$0.currency}).count)
         print(model.collectionModelData)
         self.mainView?.tableView?.reloadData()

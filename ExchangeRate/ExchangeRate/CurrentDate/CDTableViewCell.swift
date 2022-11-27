@@ -12,17 +12,9 @@ class CurrentDateTableViewCell: UITableViewCell {
     // MARK: -
     // MARK: Properties
     
-    @IBOutlet weak var labelStack: UIStackView?
-    @IBOutlet weak var currencyLabel: UILabel? = {
-        let label = UILabel(frame: CGRect.zero)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    @IBOutlet weak var valueLabel: UILabel? = {
-        let label = UILabel(frame: CGRect.zero)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    private var labelStack: UIStackView?
+    public var currencyLabel: UILabel?
+    public var valueLabel: UILabel?
     
     private var model = CurrentDateModel()
     private var data: CurrentDateData?
@@ -31,13 +23,13 @@ class CurrentDateTableViewCell: UITableViewCell {
     // MARK: Public Methods
     
     public func setData(_ data: CurrentDateData) {
-        model.refreshData(for: .now)
         currencyLabel?.text = data.currency
         currencyLabel?.backgroundColor = .blue
         valueLabel?.text = String(data.saleRateNB)
         self.data = data
         valueLabel?.backgroundColor = .green
         setConstraints()
+        self.backgroundColor = .blue
     }
     
     // MARK: -
