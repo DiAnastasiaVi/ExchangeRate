@@ -9,6 +9,7 @@ import UIKit
 
 enum CurrentDateEvents {
     case startButtonPresed
+    case datePickerPressed
 }
 
 class CurrentDateViewController: UIViewController, StoryboardLoadable {
@@ -35,7 +36,7 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
         super.viewDidLoad()
         self.mainView?.commonSetup()
         self.mainView?.welcomeViewSetup()
-//        self.view.backgroundColor = Colors.shared.iconOrange
+        self.view.backgroundColor = Colors.shared.iconOrange
         
         self.mainView?.tableView?.dataSource = self
         self.mainView?.tableView?.delegate = self

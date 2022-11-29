@@ -59,21 +59,21 @@ class CurrentDateView: UIView {
     private func datePickerConstraints() {
         let safeArea = self.safeAreaLayoutGuide
         datePicker?.translatesAutoresizingMaskIntoConstraints = false
-        datePicker?.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 15).isActive = true
+        datePicker?.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 5).isActive = true
         datePicker?.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor).isActive = true
     }
     
     private func tableViewSettings() {
         tableView?.register(CurrentDateTableViewCell.self, forCellReuseIdentifier: cellId)
         tableView?.reloadData()
-//        tableView?.backgroundColor = Colors.shared.iconOrange
+        tableView?.backgroundColor = Colors.shared.iconOrange
     }
     
     private func tableViewConstraints() {
         let safeArea = self.safeAreaLayoutGuide
         tableView?.translatesAutoresizingMaskIntoConstraints = false
         guard let dateBottom = datePicker?.bottomAnchor else {return}
-        tableView?.topAnchor.constraint(equalTo: dateBottom, constant: 15).isActive = true
+        tableView?.topAnchor.constraint(equalTo: dateBottom, constant: 5).isActive = true
         tableView?.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor).isActive = true
         tableView?.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor).isActive = true
         tableView?.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor).isActive = true
@@ -85,8 +85,8 @@ class CurrentDateView: UIView {
     private func welcomeViewConstraints() {
         let safeArea = self.safeAreaLayoutGuide
         welcomeView?.translatesAutoresizingMaskIntoConstraints = false
-        welcomeView?.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.9).isActive = true
-        welcomeView?.heightAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 0.9).isActive = true
+        welcomeView?.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 1).isActive = true
+        welcomeView?.heightAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 1).isActive = true
         welcomeView?.backgroundColor = Colors.shared.exchangeYellow
         welcomeView?.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor).isActive = true
         welcomeView?.centerYAnchor.constraint(equalTo: safeArea.centerYAnchor).isActive = true

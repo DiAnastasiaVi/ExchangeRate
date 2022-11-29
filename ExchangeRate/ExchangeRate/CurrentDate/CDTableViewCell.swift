@@ -47,7 +47,6 @@ class CurrentDateTableViewCell: UITableViewCell {
         valueLabel?.text = String(data.saleRateNB)
         self.data = data
         setConstraints()
-//        self.backgroundColor = Colors.shared.iconOrange
     }
     
     // MARK: -
