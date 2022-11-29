@@ -12,8 +12,9 @@
 		5D29DC65290D613D000B9754 /* CDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D29DC64290D613D000B9754 /* CDTableViewCell.swift */; };
 		5D38839B290C08CF007152DD /* JSONDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D38839A290C08CF007152DD /* JSONDataModel.swift */; };
 		5D3FD0C72902A78C00ACEE05 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3FD0C62902A78B00ACEE05 /* NetworkManager.swift */; };
-		5DA0C8ED289AC7E900D4DCD1 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA0C8EC289AC7E900D4DCD1 /* WelcomeScreenViewController.swift */; };
-		5DA0C8F0289AC87700D4DCD1 /* WelcomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA0C8EF289AC87700D4DCD1 /* WelcomeScreenView.swift */; };
+		5D9D068B29366530003FB467 /* WelcomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D068A29366530003FB467 /* WelcomeScreenView.swift */; };
+		5D9D068E29366567003FB467 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D068D29366567003FB467 /* WelcomeScreenViewController.swift */; };
+		5D9D069029366575003FB467 /* WelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9D068F29366575003FB467 /* WelcomeScreen.storyboard */; };
 		5DA39A4128A5833F00197996 /* AppearanceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA39A4028A5833F00197996 /* AppearanceSettings.swift */; };
 		5DA43FE028BD07BE00150DCC /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA43FDF28BD07BE00150DCC /* AppConfigurator.swift */; };
 		5DBF2A632897EE5300A6DAA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBF2A622897EE5300A6DAA6 /* AppDelegate.swift */; };
@@ -22,7 +23,6 @@
 		5DBF2A6F2897EE5500A6DAA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBF2A6D2897EE5500A6DAA6 /* LaunchScreen.storyboard */; };
 		5DDD276928AE77610058FCB2 /* ScreensCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD276828AE77610058FCB2 /* ScreensCoordinator.swift */; };
 		5DDD276B28AE783A0058FCB2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD276A28AE783A0058FCB2 /* Coordinator.swift */; };
-		5DDD276D28AE80570058FCB2 /* WelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DDD276C28AE80570058FCB2 /* WelcomeScreen.storyboard */; };
 		5DE835B5289D7B7800805842 /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE835B4289D7B7800805842 /* StoryboardLoadable.swift */; };
 		5DFC72D528BCFF26005D7A46 /* CurrentDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFC72D428BCFF26005D7A46 /* CurrentDateView.swift */; };
 		5DFC72D728BCFF39005D7A46 /* CurrentDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFC72D628BCFF39005D7A46 /* CurrentDateViewController.swift */; };
@@ -35,8 +35,9 @@
 		5D29DC64290D613D000B9754 /* CDTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDTableViewCell.swift; sourceTree = "<group>"; };
 		5D38839A290C08CF007152DD /* JSONDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataModel.swift; sourceTree = "<group>"; };
 		5D3FD0C62902A78B00ACEE05 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		5DA0C8EC289AC7E900D4DCD1 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
-		5DA0C8EF289AC87700D4DCD1 /* WelcomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenView.swift; sourceTree = "<group>"; };
+		5D9D068A29366530003FB467 /* WelcomeScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenView.swift; sourceTree = "<group>"; };
+		5D9D068D29366567003FB467 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
+		5D9D068F29366575003FB467 /* WelcomeScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WelcomeScreen.storyboard; sourceTree = "<group>"; };
 		5DA39A4028A5833F00197996 /* AppearanceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettings.swift; sourceTree = "<group>"; };
 		5DA43FDF28BD07BE00150DCC /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		5DBF2A5F2897EE5300A6DAA6 /* ExchangeRate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,7 +48,6 @@
 		5DBF2A702897EE5500A6DAA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DDD276828AE77610058FCB2 /* ScreensCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensCoordinator.swift; sourceTree = "<group>"; };
 		5DDD276A28AE783A0058FCB2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		5DDD276C28AE80570058FCB2 /* WelcomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeScreen.storyboard; sourceTree = "<group>"; };
 		5DE835B4289D7B7800805842 /* StoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
 		5DFC72D428BCFF26005D7A46 /* CurrentDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateView.swift; sourceTree = "<group>"; };
 		5DFC72D628BCFF39005D7A46 /* CurrentDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateViewController.swift; sourceTree = "<group>"; };
@@ -74,14 +74,15 @@
 			path = "NetworkManager+Model";
 			sourceTree = "<group>";
 		};
-		5DA0C8EE289AC7FD00D4DCD1 /* WelcomeScreen */ = {
+		5D9D068C2936653C003FB467 /* WelcomeScreen */ = {
 			isa = PBXGroup;
 			children = (
-				5DDD276C28AE80570058FCB2 /* WelcomeScreen.storyboard */,
-				5DA0C8EC289AC7E900D4DCD1 /* WelcomeScreenViewController.swift */,
-				5DA0C8EF289AC87700D4DCD1 /* WelcomeScreenView.swift */,
+				5D9D068F29366575003FB467 /* WelcomeScreen.storyboard */,
+				5D9D068A29366530003FB467 /* WelcomeScreenView.swift */,
+				5D9D068D29366567003FB467 /* WelcomeScreenViewController.swift */,
 			);
-			path = WelcomeScreen;
+			name = WelcomeScreen;
+			path = Coordinator/WelcomeScreen;
 			sourceTree = "<group>";
 		};
 		5DBF2A562897EE5300A6DAA6 = {
@@ -107,7 +108,7 @@
 				5DBF2A642897EE5300A6DAA6 /* SceneDelegate.swift */,
 				5DBF2A622897EE5300A6DAA6 /* AppDelegate.swift */,
 				5DE835B6289D7B8000805842 /* Coordinator */,
-				5DA0C8EE289AC7FD00D4DCD1 /* WelcomeScreen */,
+				5D9D068C2936653C003FB467 /* WelcomeScreen */,
 				5D388399290C0861007152DD /* NetworkManager+Model */,
 				5DFC72D328BCFEED005D7A46 /* CurrentDate */,
 				5DBF2A6B2897EE5500A6DAA6 /* Assets.xcassets */,
@@ -200,9 +201,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DBF2A6F2897EE5500A6DAA6 /* LaunchScreen.storyboard in Resources */,
-				5DDD276D28AE80570058FCB2 /* WelcomeScreen.storyboard in Resources */,
 				5DFC72D928BCFF47005D7A46 /* CurrentDate.storyboard in Resources */,
 				5DBF2A6C2897EE5500A6DAA6 /* Assets.xcassets in Resources */,
+				5D9D069029366575003FB467 /* WelcomeScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,8 +219,9 @@
 				5DDD276B28AE783A0058FCB2 /* Coordinator.swift in Sources */,
 				5D3FD0C72902A78C00ACEE05 /* NetworkManager.swift in Sources */,
 				5D03338529014F7700DAC67C /* CurrentDateModel.swift in Sources */,
+				5D9D068E29366567003FB467 /* WelcomeScreenViewController.swift in Sources */,
 				5D38839B290C08CF007152DD /* JSONDataModel.swift in Sources */,
-				5DA0C8ED289AC7E900D4DCD1 /* WelcomeScreenViewController.swift in Sources */,
+				5D9D068B29366530003FB467 /* WelcomeScreenView.swift in Sources */,
 				5DFC72D528BCFF26005D7A46 /* CurrentDateView.swift in Sources */,
 				5DE835B5289D7B7800805842 /* StoryboardLoadable.swift in Sources */,
 				5DA39A4128A5833F00197996 /* AppearanceSettings.swift in Sources */,
@@ -228,7 +230,6 @@
 				5D29DC63290D5F4E000B9754 /* CurrentDateViewControllerDelegate.swift in Sources */,
 				5DDD276928AE77610058FCB2 /* ScreensCoordinator.swift in Sources */,
 				5DBF2A652897EE5300A6DAA6 /* SceneDelegate.swift in Sources */,
-				5DA0C8F0289AC87700D4DCD1 /* WelcomeScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

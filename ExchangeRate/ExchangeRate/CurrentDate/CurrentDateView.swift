@@ -66,7 +66,7 @@ class CurrentDateView: UIView {
     private func tableViewSettings() {
         tableView?.register(CurrentDateTableViewCell.self, forCellReuseIdentifier: cellId)
         tableView?.reloadData()
-        tableView?.backgroundColor = Colors.shared.iconOrange
+//        tableView?.backgroundColor = Colors.shared.iconOrange
     }
     
     private func tableViewConstraints() {

@@ -35,11 +35,10 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
         super.viewDidLoad()
         self.mainView?.commonSetup()
         self.mainView?.welcomeViewSetup()
-        self.view.backgroundColor = Colors.shared.iconOrange
+//        self.view.backgroundColor = Colors.shared.iconOrange
         
         self.mainView?.tableView?.dataSource = self
         self.mainView?.tableView?.delegate = self
-//        self.mainView?.tableView?.register(CurrentDateTableViewCell.self, forCellReuseIdentifier: cellId)
     }
     
     deinit {

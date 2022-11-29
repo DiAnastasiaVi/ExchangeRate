@@ -19,10 +19,6 @@ extension CurrentDateViewController: UITableViewDelegate, UITableViewDataSource 
             return UITableViewCell()
         }
         cell.setData(model.collectionModelData[indexPath.row])
-//        cell.currencyLabel?.text = model.collectionModelData[indexPath.row].currency
-//        cell.valueLabel?.text = String(model.collectionModelData[indexPath.row].saleRateNB)
-//        cell.textLabel?.text = model.collectionModelData[indexPath.row].currency
-        cell.contentView.addSubview(cell.labelStack ?? UIStackView())
         return cell
     }
     
