@@ -9,7 +9,7 @@ import UIKit
 
 enum CurrentDateEvents {
     case startButtonPresed
-    case datePickerPressed
+    case dateChanged
 }
 
 class CurrentDateViewController: UIViewController, StoryboardLoadable {
@@ -40,6 +40,7 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
         
         self.mainView?.tableView?.dataSource = self
         self.mainView?.tableView?.delegate = self
+        startButtonPressed("")
     }
     
     deinit {
@@ -47,15 +48,22 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
     }
     
     @IBAction func startButtonPressed(_ sender: Any) {
-        NetworkManager.shared.getCurrency(on: Date()) {_ in
-        }
         self.mainView?.welcomeView?.isHidden = true
         eventHandler?(.startButtonPresed)
 
-        model.refreshData(for: .now)
+        model.refreshData(for: UIDatePicker().date) {
+            self.mainView?.tableView?.reloadData()
+        }
         print(model.collectionModelData.map({$0.currency}).count)
         print(model.collectionModelData)
-        self.mainView?.tableView?.reloadData()
     }
     
+    @IBAction func dateChanged(_ sender: UIDatePicker) {
+        eventHandler?(.dateChanged)
+        model.refreshData(for: sender.date) {
+            self.mainView?.tableView?.reloadData()
+        }
+        print(model.collectionModelData.map({$0.currency}).count)
+        print(model.collectionModelData)
+    }
 }

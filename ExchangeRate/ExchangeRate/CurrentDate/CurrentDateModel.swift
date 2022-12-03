@@ -10,9 +10,12 @@ import Foundation
 class CurrentDateModel {
     public var collectionModelData: [CurrentDateData] = []
     
-    func refreshData(for date: Date) {
+    func refreshData(for date: Date, onSuccess: @escaping () -> ()) {
         NetworkManager.shared.getCurrency(on: date) {
             self.collectionModelData = $0 ?? []
+            DispatchQueue.main.async {
+                onSuccess()
+            }
         }
     }
 }
