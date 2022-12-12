@@ -13,7 +13,7 @@ class NetworkManager {
     
     let jsonUrl = "https://api.privatbank.ua/p24api/exchange_rates?json&date="
     
-    func getCurrency(on date: Date, completion: @escaping ([CurrentDateData]?) -> Void) {
+    func getCurrency(on date: Date, completion: @escaping ([CurrentDateData]?) -> Void, onFailure: @escaping (Error) -> ()) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
         guard let specificDateUrl = URL(string: jsonUrl + dateFormatter.string(from: date)) else {return}
@@ -22,7 +22,7 @@ class NetworkManager {
         request.httpMethod = "GET"
         
         URLSession.shared.dataTask(with: request) {(data, response, error) in
-            guard let data = data else {return}
+            guard let data = data else { return }
             do {
                 let decodedData = try JSONDecoder().decode(JsonData.self, from: data)
                 completion(decodedData.exchangeRate.compactMap{
@@ -32,8 +32,7 @@ class NetworkManager {
                     return CurrentDateData(currency: currency, saleRateNB: $0.saleRateNB)
                 })
             } catch {
-                print(error)
-                completion(nil)
+                onFailure(error)
             }
         }.resume()
     }

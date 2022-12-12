@@ -53,6 +53,8 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
 
         model.refreshData(for: UIDatePicker().date) {
             self.mainView?.tableView?.reloadData()
+        } onFailure: {text in
+            self.showError(err: text)
         }
         print(model.collectionModelData.map({$0.currency}).count)
         print(model.collectionModelData)
@@ -62,8 +64,16 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
         eventHandler?(.dateChanged)
         model.refreshData(for: sender.date) {
             self.mainView?.tableView?.reloadData()
+        } onFailure: {text in
+            self.showError(err: text)
         }
         print(model.collectionModelData.map({$0.currency}).count)
         print(model.collectionModelData)
+    }
+    
+    private func showError(err: String) {
+        let alert = UIAlertController(title: "Error", message: err, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
