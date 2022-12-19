@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class CurrentDateModel {
     public var collectionModelData: [CurrentDateData] = []
@@ -17,8 +18,13 @@ class CurrentDateModel {
                 onSuccess()
             }
         } onFailure: { error in
+            var failureMessage = ""
             DispatchQueue.main.async {
-                onFailure("\(error)")
+                if error is DecodingError {
+                    failureMessage = CustomError.notFound.description
+                }
+                
+                onFailure(failureMessage)
             }
         }
     }

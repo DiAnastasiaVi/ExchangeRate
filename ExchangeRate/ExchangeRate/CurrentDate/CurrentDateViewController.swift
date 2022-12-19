@@ -9,6 +9,7 @@ import UIKit
 
 enum CurrentDateEvents {
     case startButtonPresed
+    case loadData
     case dateChanged
 }
 
@@ -40,24 +41,21 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
         
         self.mainView?.tableView?.dataSource = self
         self.mainView?.tableView?.delegate = self
-        startButtonPressed("")
+        loadData("")
     }
     
     deinit {
         print("Deinit: \(Self.self)")
     }
     
-    @IBAction func startButtonPressed(_ sender: Any) {
-        self.mainView?.welcomeView?.isHidden = true
-        eventHandler?(.startButtonPresed)
+    @IBAction func loadData(_ sender: Any) {
+        eventHandler?(.loadData)
 
         model.refreshData(for: UIDatePicker().date) {
             self.mainView?.tableView?.reloadData()
         } onFailure: {text in
             self.showError(err: text)
         }
-        print(model.collectionModelData.map({$0.currency}).count)
-        print(model.collectionModelData)
     }
     
     @IBAction func dateChanged(_ sender: UIDatePicker) {
@@ -67,9 +65,12 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
         } onFailure: {text in
             self.showError(err: text)
         }
-        print(model.collectionModelData.map({$0.currency}).count)
-        print(model.collectionModelData)
     }
+    
+    @IBAction func closeWelcomeView(_ sender: Any) {
+        self.mainView?.welcomeView?.removeFromSuperview()
+    }
+    
     
     private func showError(err: String) {
         let alert = UIAlertController(title: "Error", message: err, preferredStyle: UIAlertController.Style.alert)
