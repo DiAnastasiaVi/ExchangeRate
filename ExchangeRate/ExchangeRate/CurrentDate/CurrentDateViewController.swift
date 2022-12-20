@@ -35,7 +35,7 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mainView?.commonSetup()
-        self.view.backgroundColor = Colors.shared.iconColor
+        self.view.backgroundColor = ColorsMode.shared.color
         
         self.mainView?.tableView?.dataSource = self
         self.mainView?.tableView?.delegate = self
@@ -49,7 +49,7 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
     @IBAction func loadData(_ sender: Any) {
         eventHandler?(.loadData)
 
-        model.refreshData(for: UIDatePicker().date) {
+        model.refreshData(for: model.todayOrYesterday) {
             self.mainView?.tableView?.reloadData()
         } onFailure: {text in
             self.showError(err: text)
@@ -63,6 +63,11 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
         } onFailure: {text in
             self.showError(err: text)
         }
+    }
+    
+    public func changeDate() {
+        
+        
     }
     
     private func showError(err: String) {

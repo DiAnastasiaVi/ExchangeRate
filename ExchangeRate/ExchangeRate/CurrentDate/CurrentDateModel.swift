@@ -11,6 +11,7 @@ import UIKit
 class CurrentDateModel {
     public var collectionModelData: [CurrentDateData] = []
     
+    public var todayOrYesterday = Date()
     func refreshData(for date: Date, onSuccess: @escaping () -> (), onFailure: @escaping (String) -> ()) {
         NetworkManager.shared.getCurrency(on: date) {
             self.collectionModelData = $0 ?? []
@@ -22,6 +23,7 @@ class CurrentDateModel {
             DispatchQueue.main.async {
                 if error is DecodingError {
                     failureMessage = CustomError.notFound.description
+                    self.todayOrYesterday = Date.yesterday
                 }
                 onFailure(failureMessage)
             }

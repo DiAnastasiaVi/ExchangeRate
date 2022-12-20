@@ -15,6 +15,7 @@ class CurrentDateView: UIView {
     @IBOutlet weak var datePicker: UIDatePicker?
     @IBOutlet weak var tableView: UITableView?
     private var cellId = "cell"
+    private var model = CurrentDateModel()
     
     // MARK: -
     // MARK: Public Methods
@@ -36,7 +37,7 @@ class CurrentDateView: UIView {
         components.year = -4
         let minDate = calendar.date(byAdding: components, to: Date())
         datePicker?.minimumDate = minDate
-//        datePicker?.maximumDate = .now
+//        datePicker?.maximumDate = model.yesterday
     }
     
     private func datePickerConstraints() {
@@ -49,7 +50,7 @@ class CurrentDateView: UIView {
     private func tableViewSettings() {
         tableView?.register(CurrentDateTableViewCell.self, forCellReuseIdentifier: cellId)
         tableView?.reloadData()
-        tableView?.backgroundColor = Colors.shared.iconColor
+        tableView?.backgroundColor = ColorsMode.shared.color
     }
     
     private func tableViewConstraints() {
@@ -60,5 +61,15 @@ class CurrentDateView: UIView {
         tableView?.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor).isActive = true
         tableView?.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor).isActive = true
         tableView?.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor).isActive = true
+    }
+    
+    private func setColors() {
+        tableView?.backgroundColor = ColorsMode.shared.color
+        self.backgroundColor = ColorsMode.shared.color
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        setColors()
     }
 }

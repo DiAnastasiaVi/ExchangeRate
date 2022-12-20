@@ -7,12 +7,18 @@
 
 import UIKit
 
-class Colors {
-    static let shared = Colors()
+class ColorsMode {
+    static let shared = ColorsMode()
     private init() { }
-
-    var iconColor = UIColor(red: 172.0/255.0, green: 123.0/255.0, blue: 100.0/255.0, alpha: 1.0)
-    var darkVersion = UIColor(red: 44.0/255.0, green: 19.0/255.0, blue: 0.0/255.0, alpha: 255.0)
+    
+    var color: UIColor {
+        if UIViewController().isDarkMode {
+            return UIColor(red: 44.0/255.0, green: 19.0/255.0, blue: 0.0/255.0, alpha: 255.0)
+        }
+        else {
+            return UIColor(red: 172.0/255.0, green: 123.0/255.0, blue: 100.0/255.0, alpha: 1.0)
+        }
+    }
 }
 
 class Fonts {

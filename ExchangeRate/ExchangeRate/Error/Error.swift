@@ -24,14 +24,13 @@ extension CustomError {
 extension CustomError: CustomStringConvertible {
     public var description: String {
         switch self {
-        case .noInternetConnection:
-            return "1"
+        case .noInternetConnection,
+                .timedOut:
+            return "Internet Error"
         case .notFound:
-            return "2"
-        case .timedOut:
-            return "3"
+            return "Date Error"
         case .unexpected(_):
-            return "4"
+            return "Unexpected Error"
         }
     }
 }
@@ -39,22 +38,19 @@ extension CustomError: CustomStringConvertible {
 extension CustomError: LocalizedError {
     public var errorDescription: String? {
         switch self {
-        case .noInternetConnection:
+        case .noInternetConnection,
+                .timedOut:
             return NSLocalizedString(
-            "01",
-            comment: "001")
+            "Internet Error",
+            comment: "")
         case .notFound:
             return NSLocalizedString(
-            "02",
-            comment: "002")
-        case .timedOut:
-            return NSLocalizedString(
-            "03",
-            comment: "003")
+            "Date Error",
+            comment: "")
         case .unexpected(_):
             return NSLocalizedString(
-            "04",
-            comment: "004")
+            "Unexpected Error",
+            comment: "")
         }
     }
 }

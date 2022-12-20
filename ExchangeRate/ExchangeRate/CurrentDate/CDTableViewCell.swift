@@ -17,8 +17,6 @@ class CurrentDateTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.font = Fonts.shared.regular
-        label.textColor = .black
-        label.backgroundColor = Colors.shared.iconColor
         label.numberOfLines = 1
         return label
     }()
@@ -28,8 +26,6 @@ class CurrentDateTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.font = Fonts.shared.regular
-        label.textColor = .black
-        label.backgroundColor = Colors.shared.iconColor
         label.numberOfLines = 1
         return label
     }()
@@ -48,6 +44,7 @@ class CurrentDateTableViewCell: UITableViewCell {
         valueLabel?.text = String(data.saleRateNB)
         self.data = data
         setConstraints()
+        setColors()
     }
     
     // MARK: -
@@ -70,6 +67,16 @@ class CurrentDateTableViewCell: UITableViewCell {
         valueLabel?.leadingAnchor.constraint(equalTo: leading).isActive = true
         valueLabel?.heightAnchor.constraint(equalTo: safeArea.heightAnchor).isActive = true
         valueLabel?.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.5).isActive = true
+    }
+    
+    private func setColors() {
+        valueLabel?.backgroundColor = ColorsMode.shared.color
+        currencyLabel?.backgroundColor = ColorsMode.shared.color
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        setColors()
     }
     
 }

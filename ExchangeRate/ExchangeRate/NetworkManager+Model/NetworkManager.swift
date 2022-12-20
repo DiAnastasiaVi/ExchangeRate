@@ -16,6 +16,7 @@ class NetworkManager {
     func getCurrency(on date: Date, completion: @escaping ([CurrentDateData]?) -> Void, onFailure: @escaping (Error) -> ()) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
+        dateFormatter.timeZone = TimeZone.current
         guard let specificDateUrl = URL(string: jsonUrl + dateFormatter.string(from: date)) else {return}
         var request = URLRequest(url: specificDateUrl)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
