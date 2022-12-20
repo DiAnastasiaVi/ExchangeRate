@@ -21,6 +21,7 @@ class NetworkManager {
         var request = URLRequest(url: specificDateUrl)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
+    
         
         URLSession.shared.dataTask(with: request) {(data, response, error) in
             guard let data = data else {

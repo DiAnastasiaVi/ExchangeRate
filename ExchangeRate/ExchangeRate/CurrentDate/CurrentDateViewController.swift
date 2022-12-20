@@ -47,9 +47,13 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
     }
     
     @IBAction func loadData(_ sender: Any) {
+        LoadingOverlay.shared.showOverlay()
+        view.isUserInteractionEnabled = false
         eventHandler?(.loadData)
 
         model.refreshData(for: model.todayOrYesterday) {
+            LoadingOverlay.shared.hideOverlayView()
+            self.view.isUserInteractionEnabled = true
             self.mainView?.tableView?.reloadData()
         } onFailure: {text in
             self.showError(err: text)
@@ -57,8 +61,12 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
     }
     
     @IBAction func dateChanged(_ sender: UIDatePicker) {
+        LoadingOverlay.shared.showOverlay()
+        view.isUserInteractionEnabled = false
         eventHandler?(.dateChanged)
         model.refreshData(for: sender.date) {
+            LoadingOverlay.shared.hideOverlayView()
+            self.view.isUserInteractionEnabled = true
             self.mainView?.tableView?.reloadData()
         } onFailure: {text in
             self.showError(err: text)

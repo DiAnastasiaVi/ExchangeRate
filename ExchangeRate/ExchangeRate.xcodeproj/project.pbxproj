@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5D03338529014F7700DAC67C /* CurrentDateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D03338429014F7700DAC67C /* CurrentDateModel.swift */; };
 		5D0987592951A28500A98E62 /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0987582951A28500A98E62 /* ErrorExtension.swift */; };
+		5D0BAFA32952172600DA1E40 /* BlurLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0BAFA22952172600DA1E40 /* BlurLoader.swift */; };
+		5D0BAFA52952177500DA1E40 /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0BAFA42952177500DA1E40 /* LoadingOverlay.swift */; };
 		5D25E4A02950B56D007F5365 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D25E49F2950B56D007F5365 /* Error.swift */; };
 		5D29DC63290D5F4E000B9754 /* CDVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D29DC62290D5F4E000B9754 /* CDVCExtension.swift */; };
 		5D29DC65290D613D000B9754 /* CDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D29DC64290D613D000B9754 /* CDTableViewCell.swift */; };
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		5D03338429014F7700DAC67C /* CurrentDateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateModel.swift; sourceTree = "<group>"; };
 		5D0987582951A28500A98E62 /* ErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtension.swift; sourceTree = "<group>"; };
+		5D0BAFA22952172600DA1E40 /* BlurLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurLoader.swift; sourceTree = "<group>"; };
+		5D0BAFA42952177500DA1E40 /* LoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
 		5D25E49F2950B56D007F5365 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		5D29DC62290D5F4E000B9754 /* CDVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDVCExtension.swift; sourceTree = "<group>"; };
 		5D29DC64290D613D000B9754 /* CDTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDTableViewCell.swift; sourceTree = "<group>"; };
@@ -79,6 +83,24 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
+		5D0BAFA1295216ED00DA1E40 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				5DC3B2E72951DF7A0040EF13 /* StringExtension.swift */,
+				5D4D208E2951F19500534EA1 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		5D0BAFA629521B4000DA1E40 /* LoadingOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				5D0BAFA42952177500DA1E40 /* LoadingOverlay.swift */,
+				5D0BAFA22952172600DA1E40 /* BlurLoader.swift */,
+			);
+			path = LoadingOverlay;
+			sourceTree = "<group>";
+		};
 		5D388399290C0861007152DD /* NetworkManager+Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,14 +130,13 @@
 			isa = PBXGroup;
 			children = (
 				5DA39A4028A5833F00197996 /* AppearanceSettings.swift */,
-				5D4D208E2951F19500534EA1 /* Localizable.strings */,
-				5DC3B2E72951DF7A0040EF13 /* StringExtension.swift */,
 				5DBF2A642897EE5300A6DAA6 /* SceneDelegate.swift */,
 				5DBF2A622897EE5300A6DAA6 /* AppDelegate.swift */,
-				5DC3B2DA2951BDE10040EF13 /* DateExtension.swift */,
 				5DE835B6289D7B8000805842 /* Coordinator */,
 				5D0987572951A25200A98E62 /* Error */,
 				5D388399290C0861007152DD /* NetworkManager+Model */,
+				5D0BAFA629521B4000DA1E40 /* LoadingOverlay */,
+				5D0BAFA1295216ED00DA1E40 /* Localization */,
 				5DFC72D328BCFEED005D7A46 /* CurrentDate */,
 				5DBF2A6B2897EE5500A6DAA6 /* Assets.xcassets */,
 				5DBF2A6D2897EE5500A6DAA6 /* LaunchScreen.storyboard */,
@@ -138,6 +159,7 @@
 		5DFC72D328BCFEED005D7A46 /* CurrentDate */ = {
 			isa = PBXGroup;
 			children = (
+				5DC3B2DA2951BDE10040EF13 /* DateExtension.swift */,
 				5DFC72D428BCFF26005D7A46 /* CurrentDateView.swift */,
 				5D03338429014F7700DAC67C /* CurrentDateModel.swift */,
 				5DFC72D628BCFF39005D7A46 /* CurrentDateViewController.swift */,
@@ -224,6 +246,7 @@
 				5DA43FE028BD07BE00150DCC /* AppConfigurator.swift in Sources */,
 				5DC3B2DB2951BDE10040EF13 /* DateExtension.swift in Sources */,
 				5DFC72D728BCFF39005D7A46 /* CurrentDateViewController.swift in Sources */,
+				5D0BAFA52952177500DA1E40 /* LoadingOverlay.swift in Sources */,
 				5DDD276B28AE783A0058FCB2 /* Coordinator.swift in Sources */,
 				5D3FD0C72902A78C00ACEE05 /* NetworkManager.swift in Sources */,
 				5D0987592951A28500A98E62 /* ErrorExtension.swift in Sources */,
@@ -236,6 +259,7 @@
 				5D29DC65290D613D000B9754 /* CDTableViewCell.swift in Sources */,
 				5DBF2A632897EE5300A6DAA6 /* AppDelegate.swift in Sources */,
 				5DC3B2E82951DF7A0040EF13 /* StringExtension.swift in Sources */,
+				5D0BAFA32952172600DA1E40 /* BlurLoader.swift in Sources */,
 				5D29DC63290D5F4E000B9754 /* CDVCExtension.swift in Sources */,
 				5DDD276928AE77610058FCB2 /* ScreensCoordinator.swift in Sources */,
 				5DBF2A652897EE5300A6DAA6 /* SceneDelegate.swift in Sources */,
