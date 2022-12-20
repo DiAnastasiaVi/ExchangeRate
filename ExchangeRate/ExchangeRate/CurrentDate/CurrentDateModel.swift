@@ -19,15 +19,15 @@ class CurrentDateModel {
             }
         } onFailure: { error in
             var failureMessage = ""
+            switch error {
+            case .noInternetConnection:
+                failureMessage = CustomError.noInternetConnection.description
+            case .notFound:
+                failureMessage = CustomError.notFound.description
+            case .unexpected:
+                failureMessage = CustomError.unexpected.description
+            }
             DispatchQueue.main.async {
-                switch error {
-                case .noInternetConnection:
-                    failureMessage = CustomError.noInternetConnection.description
-                case .notFound:
-                    failureMessage = CustomError.notFound.description
-                case .unexpected:
-                    failureMessage = CustomError.unexpected.description
-                }
                 onFailure(failureMessage)
             }
         }
