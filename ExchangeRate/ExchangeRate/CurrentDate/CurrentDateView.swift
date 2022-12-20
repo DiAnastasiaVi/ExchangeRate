@@ -28,6 +28,14 @@ class CurrentDateView: UIView {
     }
     
     //MARK: -
+    //MARK: Internal Methods
+    
+    override internal func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        setColors()
+    }
+    
+    //MARK: -
     //MARK: Private Methods
     
     private func datePickerSettings() {
@@ -66,10 +74,5 @@ class CurrentDateView: UIView {
     private func setColors() {
         tableView?.backgroundColor = ColorsMode.shared.color
         self.backgroundColor = ColorsMode.shared.color
-    }
-    
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-        setColors()
     }
 }

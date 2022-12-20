@@ -18,11 +18,11 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
     //MARK: Properties
     
     public var eventHandler: ((CurrentDateEvents) -> Void)?
+    internal var model = CurrentDateModel()
+    internal let cellId = "cell"
     private var mainView: CurrentDateView? {
         return self.view as? CurrentDateView
     }
-    internal var model = CurrentDateModel()
-    internal let cellId = "cell"
     
     //MARK: -
     //MARK: Init and Deinit
@@ -46,36 +46,51 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
         print("Deinit: \(Self.self)")
     }
     
+    //MARK: -
+    //MARK: @IBAction
+    
     @IBAction func loadData(_ sender: Any) {
-        LoadingOverlay.shared.showOverlay()
-        view.isUserInteractionEnabled = false
+        self.on()
         eventHandler?(.loadData)
 
         model.refreshData(for: model.todayOrYesterday) {
-            LoadingOverlay.shared.hideOverlayView()
-            self.view.isUserInteractionEnabled = true
+            self.off()
             self.mainView?.tableView?.reloadData()
         } onFailure: {text in
             self.showError(err: text)
+            self.off()
         }
     }
     
     @IBAction func dateChanged(_ sender: UIDatePicker) {
-        LoadingOverlay.shared.showOverlay()
-        view.isUserInteractionEnabled = false
+        self.on()
         eventHandler?(.dateChanged)
+        
         model.refreshData(for: sender.date) {
-            LoadingOverlay.shared.hideOverlayView()
-            self.view.isUserInteractionEnabled = true
+            self.off()
             self.mainView?.tableView?.reloadData()
         } onFailure: {text in
             self.showError(err: text)
+            self.off()
         }
     }
 
+    //MARK: -
+    //MARK: Private Methods
+    
     private func showError(err: String) {
         let alert = UIAlertController(title: "Error".localized(), message: err, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func on() {
+        LoadingOverlay.shared.showOverlay()
+        view.isUserInteractionEnabled = false
+    }
+    
+    private func off() {
+        LoadingOverlay.shared.hideOverlayView()
+        self.view.isUserInteractionEnabled = true
     }
 }

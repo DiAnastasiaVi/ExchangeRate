@@ -20,7 +20,6 @@ class CurrentDateTableViewCell: UITableViewCell {
         label.numberOfLines = 1
         return label
     }()
-    
     public var valueLabel: UILabel? = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -29,7 +28,6 @@ class CurrentDateTableViewCell: UITableViewCell {
         label.numberOfLines = 1
         return label
     }()
-    
     private var model = CurrentDateModel()
     private var data: CurrentDateData?
     
@@ -44,6 +42,14 @@ class CurrentDateTableViewCell: UITableViewCell {
         valueLabel?.text = String(data.saleRateNB)
         self.data = data
         setConstraints()
+        setColors()
+    }
+    
+    // MARK: -
+    // MARK: Internal Methods
+    
+    override internal func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
         setColors()
     }
     
@@ -73,10 +79,4 @@ class CurrentDateTableViewCell: UITableViewCell {
         valueLabel?.backgroundColor = ColorsMode.shared.color
         currencyLabel?.backgroundColor = ColorsMode.shared.color
     }
-    
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-        setColors()
-    }
-    
 }

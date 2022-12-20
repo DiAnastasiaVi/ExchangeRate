@@ -7,8 +7,11 @@
 
 import UIKit
 
-public class LoadingOverlay{
+public class LoadingOverlay {
  
+    // MARK: -
+    // MARK: Properties
+    
     var overlayView = UIView()
     var activityIndicator = UIActivityIndicatorView()
  
@@ -18,6 +21,9 @@ public class LoadingOverlay{
         }
         return Static.instance
     }
+    
+    // MARK: -
+    // MARK: Public Methods
     
     public func showOverlay() {
         if  let appDelegate = UIApplication.shared.delegate as? AppDelegate, let window = appDelegate.window {
@@ -37,6 +43,7 @@ public class LoadingOverlay{
             activityIndicator.startAnimating()
         }
     }
+    
     public func hideOverlayView() {
         activityIndicator.stopAnimating()
         overlayView.removeFromSuperview()
