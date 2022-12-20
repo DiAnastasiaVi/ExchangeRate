@@ -26,5 +26,4 @@ class Fonts {
     private init() { }
     
     var regular = UIFont.systemFont(ofSize: 17.0)
-    var startButton = UIFont.systemFont(ofSize: 40.0)
 }

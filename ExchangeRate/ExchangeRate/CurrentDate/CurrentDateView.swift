@@ -45,7 +45,7 @@ class CurrentDateView: UIView {
         components.year = -4
         let minDate = calendar.date(byAdding: components, to: Date())
         datePicker?.minimumDate = minDate
-//        datePicker?.maximumDate = model.yesterday
+        datePicker?.maximumDate = .now
     }
     
     private func datePickerConstraints() {

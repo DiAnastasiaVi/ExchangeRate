@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5D03338529014F7700DAC67C /* CurrentDateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D03338429014F7700DAC67C /* CurrentDateModel.swift */; };
-		5D0987592951A28500A98E62 /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0987582951A28500A98E62 /* ErrorExtension.swift */; };
 		5D0BAFA32952172600DA1E40 /* BlurLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0BAFA22952172600DA1E40 /* BlurLoader.swift */; };
 		5D0BAFA52952177500DA1E40 /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0BAFA42952177500DA1E40 /* LoadingOverlay.swift */; };
 		5D25E4A02950B56D007F5365 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D25E49F2950B56D007F5365 /* Error.swift */; };
@@ -23,7 +22,6 @@
 		5DBF2A652897EE5300A6DAA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBF2A642897EE5300A6DAA6 /* SceneDelegate.swift */; };
 		5DBF2A6C2897EE5500A6DAA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DBF2A6B2897EE5500A6DAA6 /* Assets.xcassets */; };
 		5DBF2A6F2897EE5500A6DAA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBF2A6D2897EE5500A6DAA6 /* LaunchScreen.storyboard */; };
-		5DC3B2DB2951BDE10040EF13 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC3B2DA2951BDE10040EF13 /* DateExtension.swift */; };
 		5DC3B2E82951DF7A0040EF13 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC3B2E72951DF7A0040EF13 /* StringExtension.swift */; };
 		5DDD276928AE77610058FCB2 /* ScreensCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD276828AE77610058FCB2 /* ScreensCoordinator.swift */; };
 		5DDD276B28AE783A0058FCB2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD276A28AE783A0058FCB2 /* Coordinator.swift */; };
@@ -35,7 +33,6 @@
 
 /* Begin PBXFileReference section */
 		5D03338429014F7700DAC67C /* CurrentDateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateModel.swift; sourceTree = "<group>"; };
-		5D0987582951A28500A98E62 /* ErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtension.swift; sourceTree = "<group>"; };
 		5D0BAFA22952172600DA1E40 /* BlurLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurLoader.swift; sourceTree = "<group>"; };
 		5D0BAFA42952177500DA1E40 /* LoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
 		5D25E49F2950B56D007F5365 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -53,7 +50,6 @@
 		5DBF2A6B2897EE5500A6DAA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DBF2A6E2897EE5500A6DAA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DBF2A702897EE5500A6DAA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5DC3B2DA2951BDE10040EF13 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		5DC3B2E72951DF7A0040EF13 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		5DDD276828AE77610058FCB2 /* ScreensCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensCoordinator.swift; sourceTree = "<group>"; };
 		5DDD276A28AE783A0058FCB2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -78,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				5D25E49F2950B56D007F5365 /* Error.swift */,
-				5D0987582951A28500A98E62 /* ErrorExtension.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -159,7 +154,6 @@
 		5DFC72D328BCFEED005D7A46 /* CurrentDate */ = {
 			isa = PBXGroup;
 			children = (
-				5DC3B2DA2951BDE10040EF13 /* DateExtension.swift */,
 				5DFC72D428BCFF26005D7A46 /* CurrentDateView.swift */,
 				5D03338429014F7700DAC67C /* CurrentDateModel.swift */,
 				5DFC72D628BCFF39005D7A46 /* CurrentDateViewController.swift */,
@@ -244,12 +238,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DA43FE028BD07BE00150DCC /* AppConfigurator.swift in Sources */,
-				5DC3B2DB2951BDE10040EF13 /* DateExtension.swift in Sources */,
 				5DFC72D728BCFF39005D7A46 /* CurrentDateViewController.swift in Sources */,
 				5D0BAFA52952177500DA1E40 /* LoadingOverlay.swift in Sources */,
 				5DDD276B28AE783A0058FCB2 /* Coordinator.swift in Sources */,
 				5D3FD0C72902A78C00ACEE05 /* NetworkManager.swift in Sources */,
-				5D0987592951A28500A98E62 /* ErrorExtension.swift in Sources */,
 				5D03338529014F7700DAC67C /* CurrentDateModel.swift in Sources */,
 				5D38839B290C08CF007152DD /* JSONDataModel.swift in Sources */,
 				5DFC72D528BCFF26005D7A46 /* CurrentDateView.swift in Sources */,

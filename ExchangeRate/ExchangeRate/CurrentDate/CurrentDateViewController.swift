@@ -53,7 +53,7 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
         self.on()
         eventHandler?(.loadData)
 
-        model.refreshData(for: model.todayOrYesterday) {
+        model.refreshData(for: UIDatePicker().date) {
             self.off()
             self.mainView?.tableView?.reloadData()
         } onFailure: {text in

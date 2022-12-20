@@ -11,7 +11,6 @@ import UIKit
 class CurrentDateModel {
     public var collectionModelData: [CurrentDateData] = []
     
-    public var todayOrYesterday = Date()
     func refreshData(for date: Date, onSuccess: @escaping () -> (), onFailure: @escaping (String) -> ()) {
         NetworkManager.shared.getCurrency(on: date) {
             self.collectionModelData = $0 ?? []
@@ -22,12 +21,10 @@ class CurrentDateModel {
             var failureMessage = ""
             DispatchQueue.main.async {
                 switch error {
-                case .timedOut,
-                    .noInternetConnection:
+                case .noInternetConnection:
                     failureMessage = CustomError.noInternetConnection.description
                 case .notFound:
                     failureMessage = CustomError.notFound.description
-                    self.todayOrYesterday = Date.yesterday
                 case .unexpected:
                     failureMessage = CustomError.unexpected.description
                 }

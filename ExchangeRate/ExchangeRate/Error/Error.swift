@@ -10,7 +10,6 @@ import UIKit
 enum CustomError: Error {
     case noInternetConnection
     case notFound
-    case timedOut
     case unexpected
 }
 
@@ -24,8 +23,7 @@ extension CustomError {
 extension CustomError: CustomStringConvertible {
     public var description: String {
         switch self {
-        case .noInternetConnection,
-                .timedOut:
+        case .noInternetConnection:
             return "The Internet connection appears to be offline".localized()
         case .notFound:
             return "Today's rate has not been updated yet. Check out yesterday's rate".localized()
