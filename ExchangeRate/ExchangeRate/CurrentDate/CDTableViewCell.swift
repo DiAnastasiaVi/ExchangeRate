@@ -76,7 +76,7 @@ class CurrentDateTableViewCell: UITableViewCell {
     }
     
     private func setColors() {
-        valueLabel?.backgroundColor = ColorsMode.shared.color
-        currencyLabel?.backgroundColor = ColorsMode.shared.color
+        valueLabel?.backgroundColor = ColorsMode.shared.backgroundColor
+        currencyLabel?.backgroundColor = ColorsMode.shared.backgroundColor
     }
 }

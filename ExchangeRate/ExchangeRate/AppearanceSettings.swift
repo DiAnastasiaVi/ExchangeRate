@@ -11,7 +11,7 @@ class ColorsMode {
     static let shared = ColorsMode()
     private init() { }
     
-    var color: UIColor {
+    var backgroundColor: UIColor {
         if UIViewController().isDarkMode {
             return UIColor(red: 44.0/255.0, green: 19.0/255.0, blue: 0.0/255.0, alpha: 255.0)
         }
