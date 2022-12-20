@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  ExchangeRate
+
+  Created by Anastasia on 20.12.2022.
+  
+*/
+
+"Error" = "Error";
+"The Internet connection appears to be offline" = "The Internet connection appears to be offline";
+"Today's rate has not been updated yet. Check out yesterday's rate" = "Today's rate has not been updated yet. Check out yesterday's rate";
+"Something went wrong. Try again later" = "Something went wrong. Try again later";

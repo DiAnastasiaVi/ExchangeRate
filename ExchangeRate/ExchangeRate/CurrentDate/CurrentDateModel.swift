@@ -21,9 +21,15 @@ class CurrentDateModel {
         } onFailure: { error in
             var failureMessage = ""
             DispatchQueue.main.async {
-                if error is DecodingError {
+                switch error {
+                case .timedOut,
+                    .noInternetConnection:
+                    failureMessage = CustomError.noInternetConnection.description
+                case .notFound:
                     failureMessage = CustomError.notFound.description
                     self.todayOrYesterday = Date.yesterday
+                case .unexpected:
+                    failureMessage = CustomError.unexpected.description
                 }
                 onFailure(failureMessage)
             }

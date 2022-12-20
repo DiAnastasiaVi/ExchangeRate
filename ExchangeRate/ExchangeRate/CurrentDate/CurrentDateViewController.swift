@@ -64,14 +64,9 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
             self.showError(err: text)
         }
     }
-    
-    public func changeDate() {
-        
-        
-    }
-    
+
     private func showError(err: String) {
-        let alert = UIAlertController(title: "Error", message: err, preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Error".localized(), message: err, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }

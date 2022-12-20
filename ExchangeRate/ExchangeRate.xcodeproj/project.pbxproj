@@ -14,6 +14,7 @@
 		5D29DC65290D613D000B9754 /* CDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D29DC64290D613D000B9754 /* CDTableViewCell.swift */; };
 		5D38839B290C08CF007152DD /* JSONDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D38839A290C08CF007152DD /* JSONDataModel.swift */; };
 		5D3FD0C72902A78C00ACEE05 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3FD0C62902A78B00ACEE05 /* NetworkManager.swift */; };
+		5D4D208C2951F19500534EA1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D208E2951F19500534EA1 /* Localizable.strings */; };
 		5DA39A4128A5833F00197996 /* AppearanceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA39A4028A5833F00197996 /* AppearanceSettings.swift */; };
 		5DA43FE028BD07BE00150DCC /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA43FDF28BD07BE00150DCC /* AppConfigurator.swift */; };
 		5DBF2A632897EE5300A6DAA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBF2A622897EE5300A6DAA6 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 		5DBF2A6C2897EE5500A6DAA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DBF2A6B2897EE5500A6DAA6 /* Assets.xcassets */; };
 		5DBF2A6F2897EE5500A6DAA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBF2A6D2897EE5500A6DAA6 /* LaunchScreen.storyboard */; };
 		5DC3B2DB2951BDE10040EF13 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC3B2DA2951BDE10040EF13 /* DateExtension.swift */; };
+		5DC3B2E82951DF7A0040EF13 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC3B2E72951DF7A0040EF13 /* StringExtension.swift */; };
 		5DDD276928AE77610058FCB2 /* ScreensCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD276828AE77610058FCB2 /* ScreensCoordinator.swift */; };
 		5DDD276B28AE783A0058FCB2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD276A28AE783A0058FCB2 /* Coordinator.swift */; };
 		5DE835B5289D7B7800805842 /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE835B4289D7B7800805842 /* StoryboardLoadable.swift */; };
@@ -37,6 +39,8 @@
 		5D29DC64290D613D000B9754 /* CDTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDTableViewCell.swift; sourceTree = "<group>"; };
 		5D38839A290C08CF007152DD /* JSONDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataModel.swift; sourceTree = "<group>"; };
 		5D3FD0C62902A78B00ACEE05 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5D4D208D2951F19500534EA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5D4D208F2951F2B700534EA1 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5DA39A4028A5833F00197996 /* AppearanceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettings.swift; sourceTree = "<group>"; };
 		5DA43FDF28BD07BE00150DCC /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		5DBF2A5F2897EE5300A6DAA6 /* ExchangeRate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +50,7 @@
 		5DBF2A6E2897EE5500A6DAA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DBF2A702897EE5500A6DAA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DC3B2DA2951BDE10040EF13 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		5DC3B2E72951DF7A0040EF13 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		5DDD276828AE77610058FCB2 /* ScreensCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensCoordinator.swift; sourceTree = "<group>"; };
 		5DDD276A28AE783A0058FCB2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		5DE835B4289D7B7800805842 /* StoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
@@ -103,8 +108,11 @@
 			isa = PBXGroup;
 			children = (
 				5DA39A4028A5833F00197996 /* AppearanceSettings.swift */,
+				5D4D208E2951F19500534EA1 /* Localizable.strings */,
+				5DC3B2E72951DF7A0040EF13 /* StringExtension.swift */,
 				5DBF2A642897EE5300A6DAA6 /* SceneDelegate.swift */,
 				5DBF2A622897EE5300A6DAA6 /* AppDelegate.swift */,
+				5DC3B2DA2951BDE10040EF13 /* DateExtension.swift */,
 				5DE835B6289D7B8000805842 /* Coordinator */,
 				5D0987572951A25200A98E62 /* Error */,
 				5D388399290C0861007152DD /* NetworkManager+Model */,
@@ -136,7 +144,6 @@
 				5D29DC62290D5F4E000B9754 /* CDVCExtension.swift */,
 				5D29DC64290D613D000B9754 /* CDTableViewCell.swift */,
 				5DFC72D828BCFF47005D7A46 /* CurrentDate.storyboard */,
-				5DC3B2DA2951BDE10040EF13 /* DateExtension.swift */,
 			);
 			path = CurrentDate;
 			sourceTree = "<group>";
@@ -183,6 +190,7 @@
 			knownRegions = (
 				en,
 				Base,
+				uk,
 			);
 			mainGroup = 5DBF2A562897EE5300A6DAA6;
 			productRefGroup = 5DBF2A602897EE5300A6DAA6 /* Products */;
@@ -200,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DBF2A6F2897EE5500A6DAA6 /* LaunchScreen.storyboard in Resources */,
+				5D4D208C2951F19500534EA1 /* Localizable.strings in Resources */,
 				5DFC72D928BCFF47005D7A46 /* CurrentDate.storyboard in Resources */,
 				5DBF2A6C2897EE5500A6DAA6 /* Assets.xcassets in Resources */,
 			);
@@ -226,6 +235,7 @@
 				5DA39A4128A5833F00197996 /* AppearanceSettings.swift in Sources */,
 				5D29DC65290D613D000B9754 /* CDTableViewCell.swift in Sources */,
 				5DBF2A632897EE5300A6DAA6 /* AppDelegate.swift in Sources */,
+				5DC3B2E82951DF7A0040EF13 /* StringExtension.swift in Sources */,
 				5D29DC63290D5F4E000B9754 /* CDVCExtension.swift in Sources */,
 				5DDD276928AE77610058FCB2 /* ScreensCoordinator.swift in Sources */,
 				5DBF2A652897EE5300A6DAA6 /* SceneDelegate.swift in Sources */,
@@ -235,6 +245,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		5D4D208E2951F19500534EA1 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D4D208D2951F19500534EA1 /* en */,
+				5D4D208F2951F2B700534EA1 /* uk */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		5DBF2A6D2897EE5500A6DAA6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -250,6 +269,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -311,6 +331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

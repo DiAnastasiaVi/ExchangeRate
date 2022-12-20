@@ -11,7 +11,7 @@ enum CustomError: Error {
     case noInternetConnection
     case notFound
     case timedOut
-    case unexpected(code: Int)
+    case unexpected
 }
 
 extension CustomError {
@@ -26,32 +26,13 @@ extension CustomError: CustomStringConvertible {
         switch self {
         case .noInternetConnection,
                 .timedOut:
-            return "Internet Error"
+            return "The Internet connection appears to be offline".localized()
         case .notFound:
-            return "Date Error"
-        case .unexpected(_):
-            return "Unexpected Error"
+            return "Today's rate has not been updated yet. Check out yesterday's rate".localized()
+        case .unexpected:
+            return "Something went wrong. Try again later".localized()
         }
     }
 }
 
-extension CustomError: LocalizedError {
-    public var errorDescription: String? {
-        switch self {
-        case .noInternetConnection,
-                .timedOut:
-            return NSLocalizedString(
-            "Internet Error",
-            comment: "")
-        case .notFound:
-            return NSLocalizedString(
-            "Date Error",
-            comment: "")
-        case .unexpected(_):
-            return NSLocalizedString(
-            "Unexpected Error",
-            comment: "")
-        }
-    }
-}
 

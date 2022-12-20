@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  ExchangeRate
+
+  Created by Anastasia on 20.12.2022.
+  
+*/
+
+"Error" = "Сталася помилка";
+"The Internet connection appears to be offline" = "Схоже, ви не підключені до мережі Інтернет";
+"Today's rate has not been updated yet. Check out yesterday's rate" = "Сьогодні курс валют ще не оновили. Перегляньте курс за вчора";
+"Something went wrong. Try again later" = "Щось пішло не так. Спробуйте пізніше";
