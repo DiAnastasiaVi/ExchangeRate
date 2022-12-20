@@ -18,17 +18,18 @@ class CurrentDateTableViewCell: UITableViewCell {
         label.textAlignment = .center
         label.font = Fonts.shared.regular
         label.textColor = .black
-//        label.backgroundColor = Colors.shared.iconOrange
+        label.backgroundColor = Colors.shared.iconColor
         label.numberOfLines = 1
         return label
     }()
+    
     public var valueLabel: UILabel? = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.font = Fonts.shared.regular
         label.textColor = .black
-//        label.backgroundColor = Colors.shared.iconOrange
+        label.backgroundColor = Colors.shared.iconColor
         label.numberOfLines = 1
         return label
     }()

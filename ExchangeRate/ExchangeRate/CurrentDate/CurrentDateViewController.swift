@@ -8,7 +8,6 @@
 import UIKit
 
 enum CurrentDateEvents {
-    case startButtonPresed
     case loadData
     case dateChanged
 }
@@ -36,8 +35,7 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mainView?.commonSetup()
-        self.mainView?.welcomeViewSetup()
-        self.view.backgroundColor = Colors.shared.iconOrange
+        self.view.backgroundColor = Colors.shared.iconColor
         
         self.mainView?.tableView?.dataSource = self
         self.mainView?.tableView?.delegate = self
@@ -66,11 +64,6 @@ class CurrentDateViewController: UIViewController, StoryboardLoadable {
             self.showError(err: text)
         }
     }
-    
-    @IBAction func closeWelcomeView(_ sender: Any) {
-        self.mainView?.welcomeView?.removeFromSuperview()
-    }
-    
     
     private func showError(err: String) {
         let alert = UIAlertController(title: "Error", message: err, preferredStyle: UIAlertController.Style.alert)

@@ -23,7 +23,6 @@ class CurrentDateModel {
                 if error is DecodingError {
                     failureMessage = CustomError.notFound.description
                 }
-                
                 onFailure(failureMessage)
             }
         }

@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5D03338529014F7700DAC67C /* CurrentDateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D03338429014F7700DAC67C /* CurrentDateModel.swift */; };
+		5D0987592951A28500A98E62 /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0987582951A28500A98E62 /* ErrorExtension.swift */; };
 		5D25E4A02950B56D007F5365 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D25E49F2950B56D007F5365 /* Error.swift */; };
 		5D29DC63290D5F4E000B9754 /* CurrentDateViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D29DC62290D5F4E000B9754 /* CurrentDateViewControllerDelegate.swift */; };
 		5D29DC65290D613D000B9754 /* CDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D29DC64290D613D000B9754 /* CDTableViewCell.swift */; };
 		5D38839B290C08CF007152DD /* JSONDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D38839A290C08CF007152DD /* JSONDataModel.swift */; };
 		5D3FD0C72902A78C00ACEE05 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3FD0C62902A78B00ACEE05 /* NetworkManager.swift */; };
-		5D9D068B29366530003FB467 /* WelcomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D068A29366530003FB467 /* WelcomeScreenView.swift */; };
-		5D9D068E29366567003FB467 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D068D29366567003FB467 /* WelcomeScreenViewController.swift */; };
-		5D9D069029366575003FB467 /* WelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9D068F29366575003FB467 /* WelcomeScreen.storyboard */; };
 		5DA39A4128A5833F00197996 /* AppearanceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA39A4028A5833F00197996 /* AppearanceSettings.swift */; };
 		5DA43FE028BD07BE00150DCC /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA43FDF28BD07BE00150DCC /* AppConfigurator.swift */; };
 		5DBF2A632897EE5300A6DAA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBF2A622897EE5300A6DAA6 /* AppDelegate.swift */; };
@@ -32,14 +30,12 @@
 
 /* Begin PBXFileReference section */
 		5D03338429014F7700DAC67C /* CurrentDateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateModel.swift; sourceTree = "<group>"; };
+		5D0987582951A28500A98E62 /* ErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtension.swift; sourceTree = "<group>"; };
 		5D25E49F2950B56D007F5365 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		5D29DC62290D5F4E000B9754 /* CurrentDateViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateViewControllerDelegate.swift; sourceTree = "<group>"; };
 		5D29DC64290D613D000B9754 /* CDTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDTableViewCell.swift; sourceTree = "<group>"; };
 		5D38839A290C08CF007152DD /* JSONDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataModel.swift; sourceTree = "<group>"; };
 		5D3FD0C62902A78B00ACEE05 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		5D9D068A29366530003FB467 /* WelcomeScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenView.swift; sourceTree = "<group>"; };
-		5D9D068D29366567003FB467 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
-		5D9D068F29366575003FB467 /* WelcomeScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WelcomeScreen.storyboard; sourceTree = "<group>"; };
 		5DA39A4028A5833F00197996 /* AppearanceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettings.swift; sourceTree = "<group>"; };
 		5DA43FDF28BD07BE00150DCC /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		5DBF2A5F2897EE5300A6DAA6 /* ExchangeRate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,25 +63,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D0987572951A25200A98E62 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				5D25E49F2950B56D007F5365 /* Error.swift */,
+				5D0987582951A28500A98E62 /* ErrorExtension.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		5D388399290C0861007152DD /* NetworkManager+Model */ = {
 			isa = PBXGroup;
 			children = (
 				5D3FD0C62902A78B00ACEE05 /* NetworkManager.swift */,
-				5D25E49F2950B56D007F5365 /* Error.swift */,
 				5D38839A290C08CF007152DD /* JSONDataModel.swift */,
 			);
 			path = "NetworkManager+Model";
-			sourceTree = "<group>";
-		};
-		5D9D068C2936653C003FB467 /* WelcomeScreen */ = {
-			isa = PBXGroup;
-			children = (
-				5D9D068F29366575003FB467 /* WelcomeScreen.storyboard */,
-				5D9D068A29366530003FB467 /* WelcomeScreenView.swift */,
-				5D9D068D29366567003FB467 /* WelcomeScreenViewController.swift */,
-			);
-			name = WelcomeScreen;
-			path = Coordinator/WelcomeScreen;
 			sourceTree = "<group>";
 		};
 		5DBF2A562897EE5300A6DAA6 = {
@@ -111,7 +104,7 @@
 				5DBF2A642897EE5300A6DAA6 /* SceneDelegate.swift */,
 				5DBF2A622897EE5300A6DAA6 /* AppDelegate.swift */,
 				5DE835B6289D7B8000805842 /* Coordinator */,
-				5D9D068C2936653C003FB467 /* WelcomeScreen */,
+				5D0987572951A25200A98E62 /* Error */,
 				5D388399290C0861007152DD /* NetworkManager+Model */,
 				5DFC72D328BCFEED005D7A46 /* CurrentDate */,
 				5DBF2A6B2897EE5500A6DAA6 /* Assets.xcassets */,
@@ -206,7 +199,6 @@
 				5DBF2A6F2897EE5500A6DAA6 /* LaunchScreen.storyboard in Resources */,
 				5DFC72D928BCFF47005D7A46 /* CurrentDate.storyboard in Resources */,
 				5DBF2A6C2897EE5500A6DAA6 /* Assets.xcassets in Resources */,
-				5D9D069029366575003FB467 /* WelcomeScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,10 +213,9 @@
 				5DFC72D728BCFF39005D7A46 /* CurrentDateViewController.swift in Sources */,
 				5DDD276B28AE783A0058FCB2 /* Coordinator.swift in Sources */,
 				5D3FD0C72902A78C00ACEE05 /* NetworkManager.swift in Sources */,
+				5D0987592951A28500A98E62 /* ErrorExtension.swift in Sources */,
 				5D03338529014F7700DAC67C /* CurrentDateModel.swift in Sources */,
-				5D9D068E29366567003FB467 /* WelcomeScreenViewController.swift in Sources */,
 				5D38839B290C08CF007152DD /* JSONDataModel.swift in Sources */,
-				5D9D068B29366530003FB467 /* WelcomeScreenView.swift in Sources */,
 				5DFC72D528BCFF26005D7A46 /* CurrentDateView.swift in Sources */,
 				5D25E4A02950B56D007F5365 /* Error.swift in Sources */,
 				5DE835B5289D7B7800805842 /* StoryboardLoadable.swift in Sources */,
@@ -379,7 +370,7 @@
 				INFOPLIST_FILE = ExchangeRate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = WelcomeScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = CurrentDate;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -409,7 +400,7 @@
 				INFOPLIST_FILE = ExchangeRate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = WelcomeScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = CurrentDate;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

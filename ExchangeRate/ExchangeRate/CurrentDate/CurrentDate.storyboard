@@ -38,43 +38,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Rt-K5-4e5">
-                                <rect key="frame" x="87" y="547" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qzQ-hG-bYm">
-                                        <rect key="frame" x="-8" y="0.0" width="143" height="68"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcx-FZ-apy">
-                                        <rect key="frame" x="173" y="24" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ds-3w-Rw3">
-                                        <rect key="frame" x="49" y="89" width="67" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                        <connections>
-                                            <action selector="closeWelcomeView:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iPe-Dg-ai4"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <connections>
                             <outlet property="datePicker" destination="rFw-s9-uof" id="JZx-qv-XW5"/>
-                            <outlet property="imageView" destination="qzQ-hG-bYm" id="1fm-wY-Lou"/>
-                            <outlet property="startButton" destination="6Ds-3w-Rw3" id="jtc-wb-u13"/>
                             <outlet property="tableView" destination="v3k-bC-jz9" id="ixf-rw-YPH"/>
-                            <outlet property="welcomeLabel" destination="tcx-FZ-apy" id="1wW-Vg-kJ0"/>
-                            <outlet property="welcomeView" destination="3Rt-K5-4e5" id="tea-rb-xPl"/>
                         </connections>
                     </view>
                 </viewController>

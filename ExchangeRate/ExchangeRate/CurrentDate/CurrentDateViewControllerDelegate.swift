@@ -9,7 +9,6 @@ import UIKit
 
 extension CurrentDateViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(model.collectionModelData.map({$0.currency}).count)
         return model.collectionModelData.map{$0.currency}.count
     }
     
@@ -20,5 +19,4 @@ extension CurrentDateViewController: UITableViewDelegate, UITableViewDataSource 
         cell.setData(model.collectionModelData[indexPath.row])
         return cell
     }
-    
 }
